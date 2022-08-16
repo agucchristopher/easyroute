@@ -3,7 +3,8 @@ import { StackNavigation } from '@react-navigation/native';
 import CountrySelectDropdown from "react-native-searchable-country-dropdown";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useState, useEffect } from 'react';
-//import { auth } from 'firebase';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 export default function Signin({ navigation }) {
     const [pass1, passv1] = useState(true);
     return (

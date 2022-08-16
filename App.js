@@ -5,7 +5,6 @@ import Home from './screens/home';
 import Signup from './screens/signup';
 import Signin from './screens/signin';
 import Homepage from './screens/homepage';
-import Homeheader from './global/components/Homeheader';
 import React from 'react';
 
 export default function App() {
@@ -49,7 +48,7 @@ export default function App() {
           },
         }} />
         <Stack.Screen name='Dashboard' component={Homepage} options={{
-          headerTitle: () => <Homeheader />,
+          headerShown: false
         }} />
       </Stack.Navigator>
     </NavigationContainer>
