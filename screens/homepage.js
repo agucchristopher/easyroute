@@ -3,7 +3,6 @@ import { StackNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Homeheader from "../components/Homeheader";
 import { useState } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 export default function Homepage({ navigation }) {
     const [name, setName] = useState('');
     /* const getData = async () => {

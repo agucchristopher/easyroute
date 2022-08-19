@@ -1,0 +1,8 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Agu C. Christopher
+	email = 83035789+dev-kay1@users.noreply.github.com
