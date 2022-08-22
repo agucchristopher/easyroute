@@ -14,18 +14,12 @@ export default function Signup({ navigation }) {
     const [pass3, pass1v] = useState('');
 
     const register = async () => {
-        try {
-            console.log(name)
-            await AsyncStorage.setItem('Username', name);
-            navigation.navigate('Dashboard');
-        } catch (e) {
-            console.log(e);
-        }
+       Alert.alert("Hey","Clicked")
     }
     return (
         <ScrollView style={styles.container}>
             <View style={styles.container}>
-                <Image source={require('../images/logo.jpg')} style={styles.image} />
+                <Image source={require('../images/logo2.png')} style={styles.image} />
                 <View style={styles.input}>
                     <Icon name='user' style={styles.icon} size={30} color={'grey'} />
                     <TextInput style={styles.form} placeholder='Full Name' onChangeText={(name) => namev(name)} />
@@ -37,15 +31,13 @@ export default function Signup({ navigation }) {
                 <View style={styles.input}>
                     <Icon name='key' style={styles.icon} size={30} color={'grey'} />
                     <TextInput style={styles.form} secureTextEntry={pass} placeholder='Password' onChangeText={(pass) => pass1v(pass)} />
-                    <Icon name='eye' style={[styles.icon, { marginLeft: 5, }]} size={30} color={'grey'} onPress={() => { passv(!pass) }} />
+                    <Icon name='eye' style={[styles.icon, { marginLeft: 40, }]} size={30} color={'grey'} onPress={() => { passv(!pass) }} />
                 </View>
                 <View style={styles.input}>
                     <Icon name='key' style={styles.icon} size={30} color={'grey'} />
                     <TextInput style={styles.form} secureTextEntry={pass1} placeholder='Retype Password' onChangeText={(pas) => pass2v(pas)} />
-                    <Icon name='eye' style={[styles.icon, { marginLeft: 5, }]} size={30} color={'grey'} onPress={() => { pass(!pass1) }} />
+                    <Icon name='eye' style={[styles.icon, { marginLeft: 40, }]} size={30} color={'grey'} onPress={() => { pass(!pass1) }} />
                 </View>
-                <Text> {
-                    name} {phone} {pass3}</Text>
                 <TouchableOpacity onPress={register}>
                     <View style={styles.Login} >
                         <Text style={styles.logintxt}>Signup</Text>
@@ -53,7 +45,7 @@ export default function Signup({ navigation }) {
                 </TouchableOpacity>
                 <Text style={styles.text}>Or</Text>
                 <View style={styles.icons}>
-                    <Icon style={styles.iconf} name='facebook-square' fill='blue' size={50} color='dodgerblue' />
+                    <Icon style={styles.iconf} name='facebook-square' fill='blue' size={50} color='#1C62CA' />
                     <Icon style={styles.iconf} name='google' size={50} color='crimson' />
                     <Icon style={styles.iconf} name='apple' size={50} color='black' />
                 </View>
@@ -93,21 +85,25 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     Login: {
-        width: '100%',
-        padding: 5,
-        borderRadius: 50,
-        backgroundColor: 'green',
-        height: 65,
+        width: '95%',
+        margin: 10,
+        padding: 10,
+        borderRadius: 30,
+        backgroundColor: 'dodgerblue',
+        height: 70,
         textAlign: 'center',
+        fontFamily: 'monospace',
     },
     image: {
         width: '100%',
         height: 300,
+        resizeMode: "contain"
     },
     logintxt: {
         textAlign: 'center',
         color: 'white',
         fontSize: 30,
+        fontFamily: 'monospace',
     },
     input: {
         flexDirection: 'row',
@@ -125,6 +121,7 @@ const styles = StyleSheet.create({
     form: {
         width: '70%',
         fontSize: 20,
+        fontFamily: 'monospace',
     }
 });
 

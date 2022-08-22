@@ -19,10 +19,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: '100%',
-        backgroundColor: 'dodgerblue',
+        backgroundColor: '#1C62CA',
         flex: 1,
         padding: 25,
         margin: 0,
-        height: '30%',
+        height: '0%',
     }
 });

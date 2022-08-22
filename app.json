@@ -1,16 +1,11 @@
 {
   "expo": {
     "name": "Easy Routes",
-    "slug": "app",
+    "slug": "Easy Routes",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.jpg",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -18,14 +13,21 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
-    },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.spurex",
+      "config": {
+      "googleMapsApiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI"
+      }
+      },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.Easyroutes"
+      "package": "com.spurex",
+      "config":{
+        "googleMaps": { "apiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI" }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

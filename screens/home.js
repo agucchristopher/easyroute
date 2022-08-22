@@ -10,12 +10,12 @@ export default function Home({ navigation }) {
             <View style={styles.intro}>
                 <Text style={styles.textintro}>Welcome To EasyRoutes The Number One Taxi Ordering Company In Nigeria.</Text>
             </View>
-            <Image source={require('../images/logo.jpg')} style={styles.image} />
+            <Image source={require('../images/logo2.png')} style={styles.image} />
             <View>
                 <Text style={[styles.text]} >Pls Login</Text>
                 <TouchableOpacity style={{}}>
                     <View style={styles.Login}>
-                        <Text style={styles.logintxt} onPress={() => { navigation.navigate('Signup') }}>Signup</Text>
+                        <Text style={[styles.logintxt, {color: "dodgerblue",}]} onPress={() => { navigation.navigate('Signup') }}>Signup</Text>
                     </View>
                 </TouchableOpacity>
                 <Text style={[styles.text]} >Or</Text>
@@ -30,6 +30,8 @@ export default function Home({ navigation }) {
                 <Icon style={styles.icon} name='google' size={50} color='crimson' />
                 <Icon style={styles.icon} name='apple' size={50} color='black' />
             </View>
+            <Text style={{flexStart: "bottom",
+        fontFamily: 'monospace', paddingBottom: 0, textAlign: 'center'}}>Powered by spurex </Text>
         </ScrollView >
     );
 }
@@ -46,6 +48,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontFamily: 'sans-serif',
         padding: 10,
+        fontFamily: 'monospace',
     },
     icons: {
         flexDirection: 'row',
@@ -60,13 +63,16 @@ const styles = StyleSheet.create({
         margin: 10,
         padding: 10,
         borderRadius: 30,
-        backgroundColor: 'tomato',
+        backgroundColor: '#fff',
         height: 65,
         textAlign: 'center',
+        fontFamily: 'monospace',
+        borderColor: "dodgerblue",
+        borderWidth: 1,
     },
     image: {
         width: '100%',
-        height: 300,
+        resizeMode: "contain"
     },
     Signup: {
         width: '95%',
@@ -74,18 +80,20 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 30,
         backgroundColor: 'dodgerblue',
-        height: 65,
+        height: 70,
         textAlign: 'center',
+        fontFamily: 'monospace',
     },
     logintxt: {
         textAlign: 'center',
         color: 'white',
+        fontFamily: 'monospace',
         fontSize: 30,
     },
     textintro: {
-        fontSize: 25,
+        fontSize: 30,
         textAlign: 'center',
-        fontFamily: 'sans-serif',
+        fontFamily: 'monospace',
     },
     intro: {
         backgroundColor: '#fff',

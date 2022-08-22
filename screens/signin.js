@@ -8,15 +8,15 @@ export default function Signin({ navigation }) {
     return (
         <ScrollView style={styles.container}>
             <View>
-                <Image source={require('../images/logo.jpg')} style={styles.image} />
-                <View style={styles.input}>
+            <Image source={require('../images/logo2.png')} style={styles.image} />
+                  <View style={styles.input}>
                     <Icon name='phone' style={styles.icon} size={30} color={'grey'} />
                     <TextInput style={styles.form} placeholder='Phone Number' maxLength={11} keyboardType='numeric' />
                 </View>
                 <View style={styles.input}>
                     <Icon name='key' style={styles.icon} size={30} color={'grey'} />
-                    <TextInput style={styles.form} secureTextEntry={pass1} placeholder='Password' />
-                    <Icon name='eye' style={[styles.icon, { marginLeft: 5, }]} size={30} color={'grey'} onPress={() => { passv1(!pass1) }} />
+                    <TextInput style={styles.form} secureTextEntry={pass1} placeholder='Password' onChangeText={(pass) => pass1v(pass)} />
+                    <Icon name='eye' style={[styles.icon, { marginLeft: 40, }]} size={30} color={'grey'} onPress={() => { passv(!pass) }} />
                 </View>
                 <TouchableOpacity>
                     <View style={styles.Login}>
@@ -25,13 +25,13 @@ export default function Signin({ navigation }) {
                 </TouchableOpacity>
                 <Text style={styles.text}>Or</Text>
                 <View style={styles.icons}>
-                    <Icon style={styles.iconf} name='facebook-square' fill='blue' size={50} color='dodgerblue' />
+                    <Icon style={styles.iconf} name='facebook-square' fill='blue' size={50} color='#1C62CA' />
                     <Icon style={styles.iconf} name='google' size={50} color='crimson' />
                     <Icon style={styles.iconf} name='apple' size={50} color='black' />
                 </View>
             </View>
             <View style={{ flexDirection: 'row', justifyContent: 'center', }}>
-                <Text style={{ fontSize: 20, marginBottom: 10, }} onPress={() => { navigation.navigate('Signup') }}>Already A User? Signup</Text>
+                <Text style={{ fontSize: 20, marginBottom: 10, }} onPress={() => { navigation.navigate('Signup') }}>New to Easy Routes? Signup</Text>
             </View>
         </ScrollView >
     );
@@ -65,21 +65,27 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     Login: {
-        width: '100%',
-        padding: 5,
-        borderRadius: 50,
-        backgroundColor: 'green',
+        width: '95%',
+        margin: 10,
+        padding: 10,
+        borderRadius: 30,
+        backgroundColor: '#fff',
         height: 65,
         textAlign: 'center',
+        fontFamily: 'monospace',
+        borderColor: "dodgerblue",
+        borderWidth: 1,
     },
     image: {
         width: '100%',
         height: 300,
+        resizeMode: "contain"
     },
     logintxt: {
         textAlign: 'center',
-        color: 'white',
+        color: 'dodgerblue',
         fontSize: 30,
+        fontFamily: 'monospace',
     },
     input: {
         flexDirection: 'row',
@@ -97,5 +103,7 @@ const styles = StyleSheet.create({
     form: {
         width: '70%',
         fontSize: 20,
+        fontFamily: 'monospace',
     }
 });
+
