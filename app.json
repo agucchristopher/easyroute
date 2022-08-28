@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Easy Routes",
-    "slug": "Easy Routes",
+    "slug": "taxi",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo.jpg",
@@ -24,8 +24,11 @@
       },
       "package": "com.spurex",
       "config": {
-        "googleMaps": { "apiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI" }
-      }
+        "googleMaps": {
+          "apiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI"
+        }
+      },
+      "permisions": ["Camera"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
