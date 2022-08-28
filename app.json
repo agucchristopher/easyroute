@@ -9,23 +9,21 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.spurex",
       "config": {
-      "googleMapsApiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI"
+        "googleMapsApiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI"
       }
-      },
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.spurex",
-      "config":{
+      "config": {
         "googleMaps": { "apiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI" }
       }
     },
