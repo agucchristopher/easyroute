@@ -4,11 +4,11 @@ import * as React from 'react';
 import { View, Text, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Splash from './screens/splash';
-import Landingscreen from './screens/landingscreen';
-import Signin from './screens/signin';
-import Signup from './screens/signup';
-import Homepage from './screens/homepage';
+import Splash from './screens/landing/splash';
+import Landingscreen from './screens/landing/landingscreen';
+import Signin from './screens/auth/signin';
+import Signup from './screens/auth/signup';
+import Homepage from './screens/home/homepage';
 import Home from './screens/home';
 
 const Stack = createNativeStackNavigator();
@@ -24,7 +24,7 @@ function App() {
           fontSize: 25,
           alignItems: 'center',
           justifyContents: 'center'
-        }, headerStyle:{
+        }, headerTitleAlign: "center", headerStyle:{
           backgroundColor: 'dodgerblue'
         }}} />
         <Stack.Screen name='Signup' component={Signup} options={{

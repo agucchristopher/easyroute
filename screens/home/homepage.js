@@ -47,7 +47,6 @@ export default function Homepage({ navigation }) {
               width: windowWidth,
               zIndex: 1,
             }}
-            show
           />
         </ScrollView>
       </View>

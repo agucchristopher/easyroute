@@ -1,26 +1,46 @@
-import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity, TextInput, Alert } from 'react-native';
 import { StackNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-export default function Signin({ navigation }) {
+
+export default function Signup({ navigation }) {
+
+    const [pass, passv] = useState(true);
     const [pass1, passv1] = useState(true);
+    const [phone, passw] = useState('');
+    const [name, namev] = useState('');
+    const [pass2, pass2v] = useState('');
+    const [pass3, pass1v] = useState('');
+
+    const register = async () => {
+       Alert.alert("Hey","Clicked")
+    }
     return (
         <ScrollView style={styles.container}>
-            <View>
-            <Image source={require('../images/logo2.png')} style={styles.image} />
-                  <View style={styles.input}>
+            <View style={styles.container}>
+                <Image source={require('../../images/logo2.png')} style={styles.image} />
+                <View style={styles.input}>
+                    <Icon name='user' style={styles.icon} size={30} color={'grey'} />
+                    <TextInput style={styles.form} placeholder='Full Name' onChangeText={(name) => namev(name)} />
+                </View>
+                <View style={styles.input}>
                     <Icon name='phone' style={styles.icon} size={30} color={'grey'} />
-                    <TextInput style={styles.form} placeholder='Phone Number' maxLength={11} keyboardType='numeric' />
+                    <TextInput style={styles.form} placeholder='Phone Number' maxLength={11} keyboardType='numeric' onChangeText={phone => passw(phone)} />
                 </View>
                 <View style={styles.input}>
                     <Icon name='key' style={styles.icon} size={30} color={'grey'} />
-                    <TextInput style={styles.form} secureTextEntry={pass1} placeholder='Password' onChangeText={(pass) => pass1v(pass)} />
+                    <TextInput style={styles.form} secureTextEntry={pass} placeholder='Password' onChangeText={(pass) => pass1v(pass)} />
                     <Icon name='eye' style={[styles.icon, { marginLeft: 40, }]} size={30} color={'grey'} onPress={() => { passv(!pass) }} />
                 </View>
-                <TouchableOpacity>
-                    <View style={styles.Login}>
-                        <Text style={styles.logintxt} onPress={() => { navigation.navigate('Dashboard') }}>Signin</Text>
+                <View style={styles.input}>
+                    <Icon name='key' style={styles.icon} size={30} color={'grey'} />
+                    <TextInput style={styles.form} secureTextEntry={pass1} placeholder='Retype Password' onChangeText={(pas) => pass2v(pas)} />
+                    <Icon name='eye' style={[styles.icon, { marginLeft: 40, }]} size={30} color={'grey'} onPress={() => { pass(!pass1) }} />
+                </View>
+                <TouchableOpacity onPress={register}>
+                    <View style={styles.Login} >
+                        <Text style={styles.logintxt}>Signup</Text>
                     </View>
                 </TouchableOpacity>
                 <Text style={styles.text}>Or</Text>
@@ -29,14 +49,14 @@ export default function Signin({ navigation }) {
                     <Icon style={styles.iconf} name='google' size={50} color='crimson' />
                     <Icon style={styles.iconf} name='apple' size={50} color='black' />
                 </View>
-            </View>
-            <View style={{ flexDirection: 'row', justifyContent: 'center', }}>
-                <Text style={{ fontSize: 20, marginBottom: 10, }} onPress={() => { navigation.navigate('Signup') }}>New to Easy Routes? Signup</Text>
+                <View style={{ flexDirection: 'row', justifyContent: 'center', }}>
+                    <Text style={{ fontSize: 20, marginBottom: 10, }} onPress={() => { navigation.navigate('Signin') }}>Already A User?
+                        Signin </Text>
+                </View>
             </View>
         </ScrollView >
     );
 }
-
 
 const styles = StyleSheet.create({
     icon: {
@@ -69,12 +89,10 @@ const styles = StyleSheet.create({
         margin: 10,
         padding: 10,
         borderRadius: 30,
-        backgroundColor: '#fff',
-        height: 65,
+        backgroundColor: 'dodgerblue',
+        height: 70,
         textAlign: 'center',
         fontFamily: 'monospace',
-        borderColor: "dodgerblue",
-        borderWidth: 1,
     },
     image: {
         width: '100%',
@@ -83,7 +101,7 @@ const styles = StyleSheet.create({
     },
     logintxt: {
         textAlign: 'center',
-        color: 'dodgerblue',
+        color: 'white',
         fontSize: 30,
         fontFamily: 'monospace',
     },

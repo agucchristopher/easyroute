@@ -1,15 +1,12 @@
 import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { StackNavigation } from '@react-navigation/native';
-import Signup from './signup';
-import Signin from './signin';
+import Signup from './auth/signup';
+import Signin from './auth/signin';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Home({ navigation }) {
     return (
         <ScrollView style={styles.intro}>
-            <View style={styles.intro}>
-                <Text style={styles.textintro}>Welcome To EasyRoutes The Number One Taxi Ordering Company In Nigeria.</Text>
-            </View>
             <Image source={require('../images/logo2.png')} style={styles.image} />
             <View>
                 <Text style={[styles.text]} >Pls Login</Text>
@@ -66,7 +63,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         height: 65,
         textAlign: 'center',
-        fontFamily: 'monospace',
         borderColor: "dodgerblue",
         borderWidth: 1,
     },

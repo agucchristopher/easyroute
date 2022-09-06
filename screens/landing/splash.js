@@ -8,7 +8,7 @@ const Splash = ({navigation}) => {
  setTimeout(load,3000)
   return (
     <SafeAreaView style={styles.container}>
-        <Image source={require("../images/logo2.png")} />
+        <Image source={require("../../images/logo2.png")} />
     <Text style={{fontSize: 25,}}> <Icon name="map-marker" size={30}/> Easy Routes</Text>
     </SafeAreaView>
   )

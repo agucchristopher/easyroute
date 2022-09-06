@@ -4,7 +4,7 @@
     "slug": "taxi",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.jpg",
+    "icon": "./images/logo1.png",
     "userInterfaceStyle": "light",
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -12,23 +12,22 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.spurex",
+      "bundleIdentifier": "com.spurex.taxi",
       "config": {
         "googleMapsApiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI"
       }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./images/logo1.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.spurex",
+      "package": "com.spurex.taxi",
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyDWdgMXfzkGFWoRQHgJh8iOJ_K2ke3sQuI"
         }
-      },
-      "permisions": ["Camera"]
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
