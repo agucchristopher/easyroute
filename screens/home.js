@@ -3,30 +3,25 @@ import { StackNavigation } from '@react-navigation/native';
 import Signup from './auth/signup';
 import Signin from './auth/signin';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Socialicons from './auth/socialicons';
 
 export default function Home({ navigation }) {
     return (
         <ScrollView style={styles.intro}>
             <Image source={require('../images/logo2.png')} style={styles.image} />
             <View>
-                <Text style={[styles.text]} >Pls Login</Text>
-                <TouchableOpacity style={{}}>
+                <TouchableOpacity style={{marginVertical: 10,}}>
                     <View style={styles.Login}>
                         <Text style={[styles.logintxt, {color: "dodgerblue",}]} onPress={() => { navigation.navigate('Signup') }}>Signup</Text>
                     </View>
                 </TouchableOpacity>
-                <Text style={[styles.text]} >Or</Text>
                 <TouchableOpacity style={{}}>
                     <View style={styles.Signup}>
                         <Text style={styles.logintxt} onPress={() => { navigation.navigate('Signin') }}>Signin</Text>
                     </View>
                 </TouchableOpacity>
             </View>
-            <View style={styles.icons}>
-                <Icon style={styles.icon} name='facebook-square' fill='blue' size={50} color='dodgerblue' />
-                <Icon style={styles.icon} name='google' size={50} color='crimson' />
-                <Icon style={styles.icon} name='apple' size={50} color='black' />
-            </View>
+            <Socialicons/>
             <Text style={{flexStart: "bottom",
         fontFamily: 'monospace', paddingBottom: 0, textAlign: 'center'}}>Powered by spurex </Text>
         </ScrollView >
