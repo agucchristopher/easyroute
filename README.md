@@ -1,5 +1,5 @@
 # Easyroutes
-A simple app made with React Native used to order taxi online.
+A demo app made with React native used to order taxi online.
 # Tools
 React Native, Expo
 # Installation
